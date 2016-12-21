@@ -1,0 +1,104 @@
+body{
+	background: url('/img/bg2.jpg') no-repeat fixed top center;
+	font-family: "Ubuntu-Italic", "Lucida Sans", helvetica, sans;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/*form {
+	width: 100%;
+	background: grey;
+	padding: 20px;
+}*/
+
+#messages li {
+
+}
+
+#messages li:nth-child(even){
+	/*background: #999;
+	color: #fff;*/
+}
+
+#messages li:nth-child(odd){
+	/*background: #999;
+	color: #000;*/
+}
+
+#text_box {
+/*	float: left;
+	width: 75%;
+	height: 30px;
+	border: none;
+	margin-left: 10px*/
+}
+
+button {
+/*	float: left;
+	width: 20%;
+	height: 33px;*/
+}
+
+.hidden {
+	display: none;
+}
+
+#rightBox {
+	float: left;
+	width: 25%;
+}
+
+#leftBox {
+	float: left;
+	width: 70%;
+}
+
+/* CSS talk bubble */
+.talk-bubble {
+	margin: 40px;
+  display: inline-block;
+  position: relative;
+	width: 200px;
+	height: auto;
+	background-color: lightyellow;
+}
+
+/* Right triangle, left side slightly down */
+.tri-right.border.left-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -40px;
+	right: auto;
+  top: 30px;
+	bottom: auto;
+	border: 20px solid;
+	border-color: #666 #666 transparent transparent;
+}
+.tri-right.left-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -20px;
+	right: auto;
+  top: 38px;
+	bottom: auto;
+	border: 12px solid;
+	border-color: lightyellow lightyellow transparent transparent;
+}
+
+/* talk bubble contents */
+.talktext{
+  padding: 1em;
+	text-align: left;
+  line-height: 1.5em;
+}
+.talktext p{
+  /* remove webkit p margins */
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}

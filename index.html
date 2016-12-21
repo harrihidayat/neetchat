@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Socket Io NodeJS</title>
+	<link rel="stylesheet" type="text/css" href="/css/sweetalert2.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	
+	<script src="/js/sweetalert2.min.js"></script>
+</head>
+<body>
+	
+<div class="container">
+	<div class="row " style="padding-top:40px;">
+	
+
+		<div class="col-md-12" id="homepage">
+			<div class="panel panel-info">
+
+				<div class="panel-heading">
+			        Gabung Chat Woi
+			    </div>
+
+				<div class="panel-footer">
+					<div class="input-group">
+			            <input type="text" id="nama_user" class="form-control" placeholder="Tulis Nama Kamu Disini.." autocomplete="off" />
+			            <span class="input-group-btn">
+			                <button id="submit_name" class="btn btn-info" type="button">Gabung</button>
+			            </span>
+			        </div>
+				</div>
+
+			</div>
+		</div>
+
+
+
+	<div id="chatroom" class="hidden">
+		
+		<div class="col-md-4">
+          	<div class="panel panel-primary">
+            	<div class="panel-heading">
+               		Penganggur Online
+            	</div>
+            
+            	<div class="panel-body">
+                	<ul class="media-list" id="user_lists">
+						
+     				</ul>
+                </div>
+
+            </div>
+		</div>
+
+		<div class="col-md-8">
+        	<div class="panel panel-info">
+            
+	            <div class="panel-heading">
+	                Chatroom Pengangguran
+	            </div>
+	            
+	            <div class="panel-body">
+	                <ul class="media-list" id="messages">
+	                </ul>
+	            </div>
+
+	            <div class="panel-footer">
+	                <div class="input-group">
+	                    <input type="text" id="text_box" class="form-control" placeholder="Tulis Pesan.." autocomplete="off" />
+	                    <span class="input-group-btn">
+	                        <button class="btn btn-info" type="button" id="kirim">Kirim</button>
+	                    </span>
+	                </div>
+	            </div>
+        	</div>
+    	</div>
+    	
+    	
+	</div>
+	</div>
+</div>
+
+	<!-- Jquery -->
+	<script src="/js/jquery.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/js/main.js"></script>
+	<script src="/js/jquery-dateFormat.min.js"></script>
+	
+</body>
+</html>
