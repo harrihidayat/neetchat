@@ -2,15 +2,27 @@
   "name": "nodejschat",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "6.9.1"
+  },
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
     "socket.io": "^1.4.5",
     "sweetalert2": "^6.2.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harrihidayat/neetchat"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "socket.io"
+  ],
+  "license": "MIT"
 }
