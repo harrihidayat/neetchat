@@ -8,16 +8,13 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
-	res.sendFile(__dirname + '/index.html');	
+	res.sendFile(__dirname + '/index.html');
 });
 
 var users 	  = {};
 var usernames = [];
 
 io.on('connection', function(socket){
-
-	
-
 	//ketika ada user yang daftar
 	socket.on('registerUser', function(username){
 		if(usernames.indexOf(username) != -1){
@@ -25,12 +22,10 @@ io.on('connection', function(socket){
 		} else {
 			users[socket.id] = username;
 			//respon ketika ada  user
-			socket.broadcast.emit('newMessage', 'BROADCAST: ada orang baru masuk!');
+			socket.broadcast.emit('newMessage', '[BROADCAST => Ada User Baru Bergabung!]');
 			usernames.push(username);
 			socket.emit('registerRespond', true);
 			io.emit('addOnlineUsers', usernames);
-
-			
 		}
 	});
 
@@ -46,8 +41,8 @@ io.on('connection', function(socket){
 	});
 
 	//kalo ada user disconnect
-	socket.on('disconnect', function(msg){
-		socket.broadcast.emit('newMessage', 'BROADCAST: ada orang yang keluar!');
+	socket.on('disconnect', function(){
+		socket.broadcast.emit('newMessage', '[BROADCAST => Ada User Baru Keluar!]');
 
 		var index = usernames.indexOf(users[socket.id]);
 		usernames.splice(index, 1);
@@ -60,5 +55,5 @@ io.on('connection', function(socket){
 });
 
 http.listen(app.get('port'), function(){
-	console.log('Node app is running on port', app.get('port'));
+	console.log('Listening on port', app.get('port'));
 });

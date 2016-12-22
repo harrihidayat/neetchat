@@ -1,7 +1,7 @@
 {
-  "name": "neet",
-  "description": "neet",
-  "repository": "https://github.com/harrihidayat/neetchat",
+  "name": "mbah",
+  "description": "mbah",
+  "repository": "https://github.com/harrihidayat/mbahchat",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
   "keywords": ["node", "express", "static"],
   "image": "heroku/nodejs"
