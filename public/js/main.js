@@ -4,7 +4,7 @@ var username = '';
 $('#nama_user').focus();
 
 $('#kirim').on('click', function(){
-	socket.emit('newMessage', username + ': ' +$('#text_box').val());
+	socket.emit('newMessage', username + ' => ' +$('#text_box').val());
 	$('#text_box').val('');
 	isTyping = false;
 	return false;
@@ -12,7 +12,7 @@ $('#kirim').on('click', function(){
 });
 
 $('#text_box').bind("enterKey",function(e){
-   socket.emit('newMessage', username + ': ' +$('#text_box').val());
+   socket.emit('newMessage', username + ' => ' +$('#text_box').val());
 	$('#text_box').val('');
 	isTyping = false;
 	return false;
